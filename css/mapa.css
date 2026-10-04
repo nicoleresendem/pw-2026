@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container-celular {
+    width: 100%;
+    max-width: 480px;
+    background-color: #f2f9f1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+}
+
+.cabecalho-mapa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.titulo-cabecalho h1 {
+    font-size: 28px;
+    color: #0b1945;
+    line-height: 1.1;
+}
+
+.titulo-cabecalho span {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.icone-cabecalho {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapa-container {
+    width: 100%;
+    height: 350px;
+    background-color: #e5f2e5;
+    border: 3px solid #2b7a2b;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    z-index: 1; 
+}
+
+.barra-busca {
+    display: flex;
+    align-items: center;
+    background-color: #0b1945;
+    border-radius: 30px;
+    padding: 5px 15px;
+    margin-bottom: 25px;
+}
+
+.barra-busca input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 12px 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+.barra-busca input::placeholder {
+    color: #d1d5db;
+}
+
+.btn-busca {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-instrucoes p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 15px;
+}

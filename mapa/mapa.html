@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre Pontos de Coleta - EcoComunidade</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="../css/mapa.css">
+</head>
+<body>
+
+    <div class="container-celular">
+        
+         <header class="cabecalho-mapa">
+            <div class="titulo-cabecalho">
+                <h1>Encontre pontos<br>de coleta <span>perto de você</span></h1>
+            </div>
+            <div class="icone-cabecalho">
+                <img src="../imgs/icone-planta.png" alt="Ícone de uma mão segurando uma planta" style="width: 100%; height: auto; object-fit: contain;">
+            </div>
+        </header>
+
+        <main>
+            <div id="map" class="mapa-container">
+                <p style="text-align:center; margin-top:40%; color:#888;">Carregando mapa...</p>
+            </div>
+
+            <form class="barra-busca" action="#">
+                <input type="text" placeholder="Buscar..." id="busca-mapa" required>
+                <button type="submit" class="btn-busca">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+
+            <section class="texto-instrucoes">
+                <p>
+                    Faça a sua parte pelo planeta com facilidade! Utilize o mapa interativo acima para localizar ecopontos, cooperativas e lixeiras de coleta seletiva na sua região.
+                </p>
+                <p>
+                    Use a barra de busca para filtrar o tipo de material para descartar. Ao tocar nos marcadores coloridos, você descobrirá o endereço exato, os horários de funcionamento e quais materiais aquele local aceita.
+                </p>
+            </section>
+        </main>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../js/mapa.js"></script>
+
+</body>
+</html>
