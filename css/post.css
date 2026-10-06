@@ -1,0 +1,70 @@
+body {
+    background-color: #e2ffc1;
+
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    margin: 10px;
+}
+
+/* restante, cada parte foi dividido em 3 blocos, título, usuário e post */
+
+/* 1- tírulo da publicação */
+.title {
+    color: #0f223d;
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    display: flex;
+
+}
+
+/* outra parte coisas do usuário */
+.usuario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.imagemuser {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.nmuser {
+    font-weight: bold;
+}
+
+.data {
+    margin-left: auto;
+}
+
+/* outra parte (post) */
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(205, 230, 179);
+}
+
+.imagempost{
+    padding-top: 35px;
+    width: 400px;
+    height: 320px;
+    object-fit: cover;
+}
+
+.content{
+    font-size: 22px;
+    width: 450px;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+
