@@ -1,25 +1,40 @@
-body {
-    background-color: #e2ffc1;
-
-    display: flex;
-    justify-content: center; 
-    align-items: center;    
-    margin: 10px;
+/* Reseta margens automáticas para o texto não bugar */
+body, h2, p {
+    margin: 0;
+    padding: 0;
 }
 
-/* restante, cada parte foi dividido em 3 blocos, título, usuário e post */
-
-/* 1- tírulo da publicação */
-.title {
-    color: #0f223d;
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -0.5px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+/* Fundo da tela e fonte */
+body {
+    background-color: #f2faf0;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
+    justify-content: center; 
+}
 
+/* Container principal (mobile-first: ocupa a tela toda do celular) */
+main {
+    width: 100%;
+    padding: 25px;
+}
+
+/* Pontinhos lá de cima */
+.menu-dots {
+    text-align: right;
+    font-size: 24px;
+    font-weight: 800;
+    color: #122143;
+    margin-bottom: 10px;
+}
+
+/* 1- título da publicação */
+.title {
+    color: #122143;
+    font-size: 2.2rem;
+    font-weight: 800; /* Deixa a fonte mais grossa */
+    line-height: 1.1; /* Cola as duas linhas do título igual na foto */
+    letter-spacing: -1px;
+    margin-bottom: 25px;
 }
 
 /* outra parte coisas do usuário */
@@ -27,22 +42,32 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 25px;
 }
 
 .imagemuser {
-    width: 32px;
-    height: 32px;
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    display: inline-block;
+    background-color: #1c254b;
+    object-fit: cover;
 }
 
-.nmuser {
-    font-weight: bold;
+/* Mudança importante: mirar na tag 'p' dentro de nm-user para o estilo pegar nela */
+.nm-user p {
+    font-weight: 700;
+    color: #122143;
+    font-size: 1rem;
 }
 
 .data {
-    margin-left: auto;
+    margin-left: auto; /* Empurra a data para a direita do flexbox */
+}
+
+.data p {
+    color: #c1d2c7;
+    font-size: 0.85rem;
 }
 
 /* outra parte (post) */
@@ -50,21 +75,43 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(205, 230, 179);
+    background-color: #edf5e9;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-.imagempost{
-    padding-top: 35px;
-    width: 400px;
-    height: 320px;
+.imagempost {
+    width: 100%; /* Imagem preenche o quadrado */
+    border-radius: 5px;
     object-fit: cover;
 }
 
-.content{
-    font-size: 22px;
-    width: 450px;
+.content {
+    font-size: 0.95rem;
+    width: 100%;
     text-align: justify;
-    margin-top: 15px;
+    margin-top: 25px;
+    color: #2b3e4a;
+    line-height: 1.6; /* Dá respiro entre as linhas do texto pra leitura ficar limpa */
 }
 
+/* PC e Telas Maiores - Trava o quadrado no meio da tela no tamanho de um celular */
+@media (min-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
 
+    main {
+        max-width: 680px; 
+        margin: 40px auto; 
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .content {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+}
