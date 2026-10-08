@@ -1,24 +1,22 @@
-/* Reseta margens automáticas para o texto não bugar */
-body, h2, p {
+body,
+h2,
+p {
     margin: 0;
     padding: 0;
 }
 
-/* Fundo da tela e fonte */
 body {
     background-color: #f2faf0;
     font-family: 'Montserrat', sans-serif;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
-/* Container principal (mobile-first: ocupa a tela toda do celular) */
 main {
     width: 100%;
     padding: 25px;
 }
 
-/* Pontinhos lá de cima */
 .menu-dots {
     text-align: right;
     font-size: 24px;
@@ -27,17 +25,15 @@ main {
     margin-bottom: 10px;
 }
 
-/* 1- título da publicação */
 .title {
     color: #122143;
     font-size: 2.2rem;
-    font-weight: 800; /* Deixa a fonte mais grossa */
-    line-height: 1.1; /* Cola as duas linhas do título igual na foto */
+    font-weight: 800;
+    line-height: 1.1;
     letter-spacing: -1px;
     margin-bottom: 25px;
 }
 
-/* outra parte coisas do usuário */
 .usuario {
     display: flex;
     flex-direction: row;
@@ -54,7 +50,6 @@ main {
     object-fit: cover;
 }
 
-/* Mudança importante: mirar na tag 'p' dentro de nm-user para o estilo pegar nela */
 .nm-user p {
     font-weight: 700;
     color: #122143;
@@ -62,7 +57,7 @@ main {
 }
 
 .data {
-    margin-left: auto; /* Empurra a data para a direita do flexbox */
+    margin-left: auto;
 }
 
 .data p {
@@ -70,7 +65,6 @@ main {
     font-size: 0.85rem;
 }
 
-/* outra parte (post) */
 .post {
     display: flex;
     flex-direction: column;
@@ -81,7 +75,7 @@ main {
 }
 
 .imagempost {
-    width: 100%; /* Imagem preenche o quadrado */
+    width: 100%;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -92,18 +86,17 @@ main {
     text-align: justify;
     margin-top: 25px;
     color: #2b3e4a;
-    line-height: 1.6; /* Dá respiro entre as linhas do texto pra leitura ficar limpa */
+    line-height: 1.6;
 }
 
-/* PC e Telas Maiores - Trava o quadrado no meio da tela no tamanho de um celular */
 @media (min-width: 768px) {
     body {
         align-items: flex-start;
     }
 
     main {
-        max-width: 680px; 
-        margin: 40px auto; 
+        max-width: 680px;
+        margin: 40px auto;
     }
 
     .title {
