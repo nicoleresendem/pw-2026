@@ -39,7 +39,6 @@ body {
 
 .titulo-cabecalho span {
     font-size: 20px;
-    font-weight: normal;
     font-weight: 400;
 }
 
@@ -59,7 +58,14 @@ body {
     border-radius: 20px;
     margin-bottom: 20px;
     overflow: hidden;
-    z-index: 1; 
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapa-container p {
+    margin-top: 0 !important;
 }
 
 .barra-busca {
@@ -101,4 +107,50 @@ body {
     line-height: 1.5;
     text-align: justify;
     margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: #f2f9f1;
+    }
+
+    .container-celular {
+        max-width: 900px;
+        padding: 60px 20px 40px 20px;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    .cabecalho-mapa {
+        margin-bottom: 40px;
+        margin-top: 0;
+    }
+
+    .titulo-cabecalho h1 {
+        font-size: 38px;
+    }
+
+    .titulo-cabecalho span {
+        font-size: 28px;
+    }
+
+    .icone-cabecalho {
+        width: 80px;
+        height: 80px;
+    }
+
+    .mapa-container {
+        height: 500px;
+    }
+
+    .barra-busca {
+        max-width: 600px;
+        margin: 0 auto 30px auto;
+    }
+
+    .texto-instrucoes p {
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+    }
 }
