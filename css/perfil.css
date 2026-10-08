@@ -1,219 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #eef6e9;
-    color: #0d1b42;
-    padding: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f3ffee;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 400px;
 }
 
-.blog-header {
-    margin-bottom: 24px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.search-bar {
-    background-color: #0d1b42;
-    border-radius: 30px;
+.container-principal {
     display: flex;
     align-items: center;
-    padding: 14px 20px;
-    margin-bottom: 16px;
+    max-width: 400px;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-.search-bar input {
-    background: transparent;
-    border: none;
-    color: white;
-    font-size: 16px;
+.coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.card-perfil {
+    background-color: #ecf8ea;
+    padding: 15px;
+    border-radius: 16px;
     width: 100%;
-    outline: none;
+    box-sizing: border-box;
 }
 
-.search-bar input::placeholder {
-    color: #aeb5c7;
-}
-
-.search-bar button {
-    background: transparent;
-    border: none;
-    color: white;
+.card-perfil h3 {
+    margin: 0 0 5px 0;
+    color: #001f3f;
     font-size: 18px;
-    cursor: pointer;
-}
-
-.tags-container {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 6px;
-    scrollbar-width: none;
-}
-
-.tags-container::-webkit-scrollbar {
-    display: none;
-}
-
-.tag {
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 14px;
     font-weight: 600;
-    white-space: nowrap;
 }
 
-.tag-reciclagem {
-    background-color: #7dd23c;
-    color: white;
+.card-perfil p {
+    margin: 0;
+    color: #003366;
+    font-size: 16px;
 }
 
-.tag-upcycling {
-    background-color: #e9c4f5;
-    color: white;
-}
-
-.tag-educacao {
-    background-color: #316d1a;
-    color: white;
-}
-
-.tag-noticias {
-    background-color: #d83434;
-    color: white;
-}
-
-.blog-content {
+.botao-perfil {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.card-image-wrapper {
-    position: relative;
+    align-items: center;
+    gap: 8px;
+    background-color: #26640b;
+    color: #ffffff;
     width: 100%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: flex-start;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
-/* Altura das imagens grandes */
-.card-image-wrapper img {
+.botao-perfil img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.foto-perfil {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1c2b4d;
+    flex-shrink: 0;
+}
+
+.card-meus-posts {
+    background-color: #ecf8ea;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.card-meus-posts h3 {
+    color: #001f3f;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-posts {
+    background-color: #ecf8ea;
+    margin-top: 15px;
+    border-radius: 16px;
+    text-align: justify;
+}
+
+.header-post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.header-post h3 {
+    color: #001f3f;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.card-posts p {
+    color: #001f3f;
+    font-size: 15px;
+    margin: 15px;
+    text-align: justify;
+}
+
+.header-post img {
+    width: 20px;
+    height: 20px;
+}
+
+.card-posts>img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-radius: 16px;
     display: block;
 }
 
-.heart-icon {
-    position: absolute;
-    top: 14px;
-    left: 14px;
-    color: #d83434;
-    font-size: 22px;
-    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
-    cursor: pointer;
-}
 
-.card-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 4px;
-}
-
-.card-info h2 {
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.ellipsis-icon {
-    font-size: 20px;
-    color: #0d1b42;
-    cursor: pointer;
-    padding-left: 12px;
-}
-
-.card-grid-half {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-}
-
-.card-half .card-image-wrapper img {
-    height: 140px;
-}
-
-.card-half .card-info h2 {
-    font-size: 15px;
-}
-
-
-/*Adaptação para PC e Tablet*/
 @media (min-width: 768px) {
+
     body {
+        max-width: 800px;
         padding: 40px;
     }
 
-    .blog-header {
+    .container-principal {
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+    }
+
+    .coluna-esquerda {
+        flex: 1;
+        max-width: 48%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin-bottom: 40px;
+        align-items: stretch;
     }
 
-    .search-bar {
+    .card-perfil {
         width: 100%;
-        max-width: 600px;
     }
 
-    .tags-container {
+    .botao-perfil {
+        width: 100%;
         justify-content: center;
-        flex-wrap: wrap;
+        padding: 10px;
     }
 
-    .blog-content {
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+
+    .grid-posts {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 32px;
+        gap: 20px;
+        margin-top: 15px;
     }
 
-    .card-full {
-        grid-column: span 2;
-    }
-
-    /* No PC as imagens voltam a ficar maiores para preencher a tela */
-    .card-full .card-image-wrapper img {
-        height: 350px;
-    }
-
-    .card-grid-half {
-        grid-column: span 2;
-        grid-template-columns: 1fr 1fr;
-        gap: 32px;
-    }
-
-    .card-half .card-image-wrapper img {
-        height: 250px;
-    }
-
-    .card-info h2 {
-        font-size: 22px;
-    }
-
-    .card-half .card-info h2 {
-        font-size: 20px;
+    .card-posts {
+        margin-top: 0;
     }
 }
