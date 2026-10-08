@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -34,11 +34,13 @@ body {
     font-size: 28px;
     color: #0b1945;
     line-height: 1.1;
+    font-weight: 800;
 }
 
 .titulo-cabecalho span {
     font-size: 20px;
     font-weight: normal;
+    font-weight: 400;
 }
 
 .icone-cabecalho {
