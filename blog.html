@@ -14,22 +14,22 @@
 <body>
     <header class="blog-header">
         <div class="search-bar">
-            <input type="text" placeholder="Buscar conteúdo...">
+            <input type="text" id="busca-blog" placeholder="Buscar conteúdo...">
             <button type="submit" aria-label="Pesquisar">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
 
-        <nav class="tags-container">
-            <span class="tag tag-reciclagem">Reciclagem</span>
-            <span class="tag tag-upcycling">Upcycling</span>
-            <span class="tag tag-educacao">Educação</span>
-            <span class="tag tag-noticias">Notícias</span>
+            <nav class="tags-container">
+            <span class="tag tag-reciclagem" data-tag="reciclagem">Reciclagem</span>
+            <span class="tag tag-upcycling" data-tag="upcycling">Upcycling</span>
+            <span class="tag tag-educacao" data-tag="educacao">Educação</span>
+            <span class="tag tag-noticias" data-tag="noticias">Notícias</span>
         </nav>
     </header>
 
     <main class="blog-content">
-        <article class="card card-full">
+        <article class="card card-full" data-tags="reciclagem noticias">
             <div class="card-image-wrapper">
                 <img src="imgs/lixo_eletronico.jpg" alt="Pilha de lixo eletrônico antigo">
                 <i class="fa-solid fa-heart heart-icon"></i>
@@ -40,7 +40,7 @@
             </div>
         </article>
 
-        <article class="card card-full">
+        <article class="card card-full" data-tags="reciclagem educacao upcycling">
             <div class="card-image-wrapper">
                 <img src="imgs/compostagem.jpg" alt="Pessoa segurando cascas de frutas para compostagem">
                 <i class="fa-solid fa-heart heart-icon"></i>
@@ -52,7 +52,7 @@
         </article>
 
         <div class="card-grid-half">
-            <article class="card card-half">
+            <article class="card card-half" data-tags="reciclagem educacao">
                 <div class="card-image-wrapper">
                     <img src="imgs/lixeiras.jpg" alt="Lixeiras de coleta seletiva coloridas">
                     <i class="fa-solid fa-heart heart-icon"></i>
@@ -62,7 +62,7 @@
                 </div>
             </article>
 
-            <article class="card card-half">
+            <article class="card card-half" data-tags="educacao noticias">
                 <div class="card-image-wrapper">
                     <img src="imgs/consumo-e-producao-OS12.png" alt="Símbolo do ODS 12 da ONU">
                     <i class="fa-solid fa-heart heart-icon"></i>
@@ -73,7 +73,7 @@
             </article>
         </div>
 
-        <article class="card card-full">
+        <article class="card card-full" data-tags="educacao noticias">
             <div class="card-image-wrapper">
                 <img src="imgs/pobreza.jpg" alt="Moradias precárias e impacto social">
                 <i class="fa-solid fa-heart heart-icon"></i>
@@ -84,6 +84,8 @@
             </div>
         </article>
     </main>
+    <script src="js/blog.js"></script>
+
 </body>
 
 </html>

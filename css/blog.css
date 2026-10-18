@@ -197,8 +197,15 @@ body {
 
     .card-grid-half {
         grid-column: span 2;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap; 
         gap: 32px;
+        justify-content: space-between;
+    }
+
+    .card-half {
+        flex: 1 1 calc(50% - 16px); 
+        min-width: 300px;
     }
 
     .card-half .card-image-wrapper img {
