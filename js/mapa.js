@@ -23,8 +23,8 @@ const pontosDeColeta = [
         nome: "BIOVALE RECICLAGEM DE ELETRÔNICOS (Unidade Fabriciano)",
         lat: -19.5193081,
         lng: -42.6289224,
-        cidade: "Coronel Fabriciano", // <-- Corrigido para Fabriciano!
-        bairro: "Centro", // Você pode alterar para o bairro exato se souber
+        cidade: "Coronel Fabriciano", 
+        bairro: "Centro", 
         endereco: "Ponto de coleta integrado",
         materiais: "Computadores, placas, cabos, celulares e eletrônicos",
         horario: "Seg-Sex: 08:00 - 17:00",
