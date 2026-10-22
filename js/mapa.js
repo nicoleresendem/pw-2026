@@ -1,4 +1,3 @@
-//Inicializa o mapa centralizado na região do Vale do Aço
 var mapa = L.map('map').setView([-19.55, -42.45], 9);
 
 L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
@@ -6,7 +5,6 @@ L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '© Google'
 }).addTo(mapa);
 
-//Banco de Dados Local dos Pontos de Coleta
 const pontosDeColeta = [
     {
         nome: "BIOVALE RECICLAGEM DE ELETRÔNICOS",
@@ -23,8 +21,8 @@ const pontosDeColeta = [
         nome: "BIOVALE RECICLAGEM DE ELETRÔNICOS (Unidade Fabriciano)",
         lat: -19.5193081,
         lng: -42.6289224,
-        cidade: "Coronel Fabriciano", 
-        bairro: "Centro", 
+        cidade: "Coronel Fabriciano",
+        bairro: "Centro",
         endereco: "Ponto de coleta integrado",
         materiais: "Computadores, placas, cabos, celulares e eletrônicos",
         horario: "Seg-Sex: 08:00 - 17:00",
@@ -54,8 +52,7 @@ const pontosDeColeta = [
     }
 ];
 
-//Colocando os pontos no mapa
-pontosDeColeta.forEach(function(ponto) {
+pontosDeColeta.forEach(function (ponto) {
     var conteudoPopup = `
         <strong style="color: #2b7a2b; font-size: 14px;">${ponto.nome}</strong><br><br>
         <b>📍 Local:</b> ${ponto.endereco} - ${ponto.bairro}, ${ponto.cidade}<br>
@@ -63,41 +60,38 @@ pontosDeColeta.forEach(function(ponto) {
         <b>🕒 Horário:</b> ${ponto.horario}<br>
         <b>📞 Contato:</b> ${ponto.telefone}
     `;
-    
+
     ponto.marcador = L.marker([ponto.lat, ponto.lng]).addTo(mapa).bindPopup(conteudoPopup);
 });
 
-
-//Lógica da barra de pesquisa
 var formBusca = document.querySelector('.barra-busca');
 
-formBusca.addEventListener('submit', function(evento) {
-    evento.preventDefault(); 
-    
+formBusca.addEventListener('submit', function (evento) {
+    evento.preventDefault();
+
     var textoDigitado = document.getElementById('busca-mapa').value.toLowerCase();
     var encontrou = false;
-    
+
     for (var i = 0; i < pontosDeColeta.length; i++) {
         var p = pontosDeColeta[i];
-        
-        if (p.cidade.toLowerCase().includes(textoDigitado) || 
-            p.bairro.toLowerCase().includes(textoDigitado) || 
+
+        if (p.cidade.toLowerCase().includes(textoDigitado) ||
+            p.bairro.toLowerCase().includes(textoDigitado) ||
             p.nome.toLowerCase().includes(textoDigitado)) {
-            
+
             mapa.flyTo([p.lat, p.lng], 15);
             p.marcador.openPopup();
-            
+
             encontrou = true;
-            break; 
+            break;
         }
     }
-    
+
     if (!encontrou) {
-            // Mensagem de erro
-            alert("Ponto de coleta não encontrado. Tente buscar por 'Ipatinga', 'Timóteo', 'Coronel Fabriciano' ou 'Caratinga'.");
-        }
+        alert("Ponto de coleta não encontrado. Tente buscar por 'Ipatinga', 'Timóteo', 'Coronel Fabriciano' ou 'Caratinga'.");
+    }
 });
 
-setTimeout(function() {
+setTimeout(function () {
     mapa.invalidateSize();
 }, 100);

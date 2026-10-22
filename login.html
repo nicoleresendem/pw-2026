@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="./imgs/logotransparente.png" alt="Logotipo Ecocomunidade" class="logo">
+        </div>
+    </header>
+    <div class="card-login">
+        <h2>Faça seu login</h2>
+        <form action="./perfil.html">
+            <label>E-mail:</label>
+            <input type="email" id="campo-email" required>
+
+            <label>Senha:</label>
+            <input type="password" id="campo-senha" required>
+
+            <div id="caixa-lembrar">
+                <input type="checkbox" id="lembrar">
+                <label for="lembrar">Lembrar-me</label>
+            </div>
+
+            <button class="botao-enviar" type="submit">Enviar</button>
+            <a href="#" class="esqueceu-senha">Esqueceu a senha?</a>
+        </form>
+    </div>
+
+    <button id="botao-claro-escuro">
+        <span class="bolota"></span></button>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

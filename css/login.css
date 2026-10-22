@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f3ffee;
+    color: #001f3f;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 20px auto;
+}
+
+.card-login {
+    background-color: #ecf8ea;
+    padding: 15px;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-login h2 {
+    margin: 5px 0 15px 0;
+    text-align: center;
+    color: #001f3f;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-login p {
+    margin: 0;
+    color: #003366;
+    font-size: 16px;
+}
+
+.card-login form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-login input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e7e7e7;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 8px;
+}
+
+.botao-enviar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #26640b;
+    color: #ffffff;
+    width: 70%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 10px auto 10px auto;
+}
+
+#caixa-lembrar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 10px 0 10px 0;
+    font-size: 14px;
+}
+
+#lembrar {
+    width: auto;
+    margin: 0;
+}
+
+.esqueceu-senha {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #3b5360;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: 800px;
+        padding: 30px;
+    }
+
+    .logo {
+        width: 80%;
+        height: auto;
+    }
+
+    .card-login {
+        width: 100%;
+    }
+
+    .botao-enviar {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+
+}
+
+#botao-claro-escuro {
+    width: 60px;
+    height: 30px;
+    background-color: #26640b;
+    border: none;
+    border-radius: 30px;
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.bolota {
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.modo-escuro #botao-claro-escuro {
+    background-color: #26640b;
+}
+
+.modo-escuro .bolota {
+    transform: translateX(30px);
+}
+
+body.modo-escuro {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.modo-escuro .card-login {
+    background-color: #2c2c2c;
+}
+
+.modo-escuro .esqueceu-senha,
+.modo-escuro .card-login p,
+.modo-escuro .card-login h2 {
+    color: #ffffff;
+}
