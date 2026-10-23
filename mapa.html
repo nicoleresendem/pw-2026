@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,18 +12,20 @@
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="css/mapa.css">
-    
+
 </head>
+
 <body>
 
     <div class="container-celular">
-        
-         <header class="cabecalho-mapa">
+
+        <header class="cabecalho-mapa">
             <div class="titulo-cabecalho">
                 <h1>Encontre pontos<br>de coleta <span>perto de você</span></h1>
             </div>
             <div class="icone-cabecalho">
-                <img src="imgs/icone-planta.png" alt="Ícone de uma mão segurando uma planta" style="width: 100%; height: auto; object-fit: contain;">
+                <img src="imgs/icone-planta.png" alt="Ícone de uma mão segurando uma planta"
+                    style="width: 100%; height: auto; object-fit: contain;">
             </div>
         </header>
 
@@ -39,18 +42,29 @@
 
             <section class="texto-instrucoes">
                 <p>
-                    Faça a sua parte pelo planeta com facilidade! Utilize o mapa interativo acima para localizar ecopontos, cooperativas e lixeiras de coleta seletiva na sua região.
+                    Faça a sua parte pelo planeta com facilidade! Utilize o mapa interativo acima para localizar
+                    ecopontos, cooperativas e lixeiras de coleta seletiva na sua região.
                 </p>
                 <p>
-                    Use a barra de busca para filtrar o tipo de material para descartar. Ao tocar nos marcadores coloridos, você descobrirá o endereço exato, os horários de funcionamento e quais materiais aquele local aceita.
+                    Use a barra de busca para filtrar o tipo de material para descartar. Ao tocar nos marcadores
+                    coloridos, você descobrirá o endereço exato, os horários de funcionamento e quais materiais aquele
+                    local aceita.
                 </p>
             </section>
         </main>
 
     </div>
 
+    <nav class="menu-inferior">
+        <a href="./home.html" class="item-menu"><img src="./imgs/home_icon.png" alt="Início"></a>
+        <a href="./blog.html" class="item-menu"><img src="./imgs/buscar_icon.png" alt="Buscar"></a>
+        <a href="./mapa.html" class="item-menu"><img src="./imgs/pin.png" alt="Notificações"></a>
+        <a href="./perfil.html" class="item-menu"><img src="./imgs/perfil_icon.png" alt="Perfil"></a>
+    </nav>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/mapa.js"></script>
 
 </body>
+
 </html>

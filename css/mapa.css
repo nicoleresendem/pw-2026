@@ -109,6 +109,30 @@ body {
     margin-bottom: 15px;
 }
 
+.menu-inferior {
+ position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #f6fdf2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 14px 0;
+  z-index: 999;
+}
+
+.item-menu {
+  display: block;
+}
+
+.item-menu img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 @media (min-width: 768px) {
     body {
         background-color: #f2f9f1;
