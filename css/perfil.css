@@ -137,6 +137,30 @@ body {
     display: block;
 }
 
+.menu-inferior {
+ position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #f6fdf2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 14px 0;
+  z-index: 999;
+}
+
+.item-menu {
+  display: block;
+}
+
+.item-menu img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 
 @media (min-width: 768px) {
 
@@ -206,6 +230,9 @@ body {
     background-color: #ffffff;
     border-radius: 50%; 
     transition: transform 0.3s ease; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modo-escuro #botao-claro-escuro {
@@ -216,6 +243,13 @@ body {
     transform: translateX(30px); 
 }
 
+.bolota img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.modo-escuro .menu-inferior,
 body.modo-escuro {
     background-color: #181818;
     color: #ffffff;
@@ -235,6 +269,7 @@ body.modo-escuro {
     color: #ffffff;
 }
 
+.modo-escuro .item-menu img,
 .modo-escuro .header-post img {
     filter: brightness(0) invert(1);
 }
