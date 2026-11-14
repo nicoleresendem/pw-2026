@@ -1,0 +1,21 @@
+{
+  "usuario": {
+    "nome": "Cristiano",
+    "bio": "Apaixonado por sustentabilidade e consumo consciente.",
+    "foto": "imgs/foto-cristiano.png"
+  },
+  "posts": [
+    {
+      "titulo": "Minha jornada Lixo Zero",
+      "imagem": "imgs/ecobag.png",
+      "resumo": "Quando decidi reduzir meu lixo, achei que teria que mudar minha vida da noite para o dia...",
+      "conteudo": "Quando decidi reduzir meu lixo, achei que teria que mudar minha vida da noite para o dia. Erro meu! No primeiro mês, foquei apenas em recusar sacolas plásticas, levar minha própria ecobag e separar os recicláveis."
+    },
+    {
+      "titulo": "O que são biocombustíveis?",
+      "imagem": "imgs/fabrica.png",
+      "resumo": "Biocombustíveis são combustíveis produzidos a partir de matéria orgânica renovável...",
+      "conteudo": "Biocombustíveis são combustíveis produzidos a partir de matéria orgânica renovável, como plantas e resíduos animais. Eles servem como alternativa limpa aos combustíveis fósseis."
+    }
+  ]
+}

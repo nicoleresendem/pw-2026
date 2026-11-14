@@ -6,15 +6,15 @@
 }
 
 body {
-  background-color: #eef9e4;
+  background-color: #f4fdf0; 
   color: #111a3a;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 75px;
-  max-width: 450px;                      
-  margin: 0 auto;                       
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  padding-bottom: 80px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -27,11 +27,11 @@ img {
 header {
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px 16px;
 }
 
 .logo-container img {
-  height: 32px;
+  height: 36px;
   width: auto;
 }
 
@@ -40,6 +40,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
 }
 
 .banner-principal {
@@ -60,16 +61,31 @@ main {
   gap: 16px;
 }
 
-.card-mapa {
-  background-color: #ffffff;
-  border: 1px solid #7eb26e;
+.grid-cards a {
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.grid-cards a:hover {
+  transform: translateY(-3px);
+}
+
+.card-mapa,
+.container-imagem {
   border-radius: 20px;
   overflow: hidden;
   position: relative;
   height: 210px;
 }
 
-.card-mapa img {
+.card-mapa {
+  background-color: #ffffff;
+  border: 1px solid #7eb26e;
+}
+
+.card-mapa img,
+.container-imagem img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -89,19 +105,6 @@ main {
   line-height: 1.2;
 }
 
-.container-imagem {
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  height: 210px;
-}
-
-.container-imagem img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .texto-sobre-imagem {
   position: absolute;
   top: 16px;
@@ -111,15 +114,16 @@ main {
   font-size: 14px;
   font-weight: 800;
   line-height: 1.2;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .caixa-informativa {
   background-color: #0e1e47;
   color: #ffffff;
-  padding: 16px 20px;
+  padding: 18px 20px;
   border-radius: 20px;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -145,4 +149,54 @@ main {
   width: 24px;
   height: 24px;
   object-fit: contain;
+}
+
+@media (max-width: 380px) {
+  .grid-cards {
+    grid-template-columns: 1fr; 
+  }
+
+  .card-mapa,
+  .container-imagem {
+    height: 170px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: 900px; 
+  }
+
+  .logo-container img {
+    height: 44px;
+  }
+
+  main {
+    padding: 0 32px;
+    gap: 24px;
+  }
+
+  .banner-principal img {
+    height: 320px;
+  }
+
+  .grid-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .card-mapa,
+  .container-imagem {
+    height: 280px;
+  }
+
+  .info-mapa p,
+  .texto-sobre-imagem {
+    font-size: 18px;
+  }
+
+  .caixa-informativa {
+    font-size: 15px;
+    padding: 24px 32px;
+  }
 }

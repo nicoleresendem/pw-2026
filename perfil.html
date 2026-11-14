@@ -19,38 +19,48 @@
     <div class="container-principal">
         <div class="coluna-esquerda">
             <div class="card-perfil">
-                <h3>Nome</h3>
-                <p>Biografia</p>
+                <h3 id="perfil-nome">Nome</h3>
+                <p id="perfil-bio">Biografia</p>
             </div>
             <button class="botao-perfil">
                 <img src="imgs/lapis-editar-perfil.png" alt="Icone">
                 Editar perfil
             </button>
         </div>
-        <img src="imgs/foto-cristiano.png" alt="Fotografia de perfil" class="foto-perfil">
+        <img id="perfil-foto" src="imgs/foto-cristiano.png" alt="Fotografia de perfil" class="foto-perfil">
     </div>
+
     <div class="card-meus-posts">
         <h3>Meus posts</h3>
+        <button id="btn-novo-post" class="botao-perfil">+ Novo post</button>
     </div>
-    <div class="grid-posts">
-        <div class="card-posts">
-            <div class="header-post">
-                <h3>Minha jornada Lixo Zero</h3>
-                <img src="imgs/lapis-editar-post.png" alt="Icone">
-            </div>
-            <img src="imgs/ecobag.png" alt="EcoBag">
-            <p> Quando decidi reduzir meu lixo, achei que teria que mudar minha vida da noite para o dia. Erro meu! No
-                primeiro mês, foquei apenas [...]</p>
+
+    <p id="msg-lista-vazia" style="display: none; text-align: center; margin: 20px 0;">Lista vazia</p>
+
+    <ul id="cards" class="grid-posts"></ul>
+
+    <div id="modal-overlay" class="overlay-escondido">
+        <div class="modal-caixa">
+            <button id="fechar-modal">✖</button>
+            <h2 id="modal-titulo"></h2>
+            <img id="modal-imagem" src="" alt="Imagem do post">
+            <p id="modal-texto"></p>
         </div>
-        <div class="card-posts">
-            <div class="header-post">
-                <h3>O que são biocombustiveis?</h3>
-                <img src="imgs/lapis-editar-post.png" alt="Icone">
-            </div>
-            <img src="imgs/fabrica.png" alt="Fábrica">
-            <p> Biocombustíveis são combustíveis produzidos a partir de matéria orgânica renovável, como plantas e
-                resíduos
-                animais. Eles servem [...]</p>
+    </div>
+
+    <div id="modal-cadastro-overlay" class="overlay-escondido">
+        <div class="modal-caixa">
+            <button id="fechar-modal-cadastro">✖</button>
+            <h2>Novo Post</h2>
+            <form id="form-novo-post">
+                <input type="text" id="novo-titulo" placeholder="Título do post" required>
+
+                <label for="nova-imagem" style="font-size: 14px; font-weight: bold;">Escolha uma imagem:</label>
+                <input type="file" id="nova-imagem" accept="image/*" required>
+
+                <textarea id="novo-conteudo" placeholder="Conteúdo completo do post..." rows="4" required></textarea>
+                <button type="submit" class="botao-perfil">Publicar</button>
+            </form>
         </div>
     </div>
 
@@ -62,6 +72,6 @@
     </nav>
 
     <script src="js/perfil.js"></script>
-
 </body>
+
 </html>
