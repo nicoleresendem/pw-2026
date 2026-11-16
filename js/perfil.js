@@ -30,7 +30,8 @@ async function loadData() {
         document.getElementById("perfil-bio").innerText = data.usuario.bio;
         document.getElementById("perfil-foto").setAttribute("src", data.usuario.foto);
 
-        dadosPosts = data.posts;
+        var postsSalvos = localStorage.getItem("postsPerfil");
+        dadosPosts = postsSalvos ? JSON.parse(postsSalvos) : data.posts;
         renderizarLista();
 
     } catch (err) {
@@ -68,6 +69,7 @@ function addItemLista(item, index) {
     btnRemover.addEventListener("click", function (e) {
         e.stopPropagation(); // Impede que clicar em "Excluir" abra a modal do post
         dadosPosts.splice(index, 1);
+        localStorage.setItem("postsPerfil", JSON.stringify(dadosPosts));
         renderizarLista();
     });
 
@@ -138,10 +140,12 @@ document.getElementById("form-novo-post").addEventListener("submit", function (e
                 titulo: titulo,
                 imagem: imagemBase64,
                 resumo: conteudo.substring(0, 90) + "...",
-                conteudo: conteudo
+                conteudo: conteudo,
+                tags: "reciclagem educacao upcycling noticias"
             };
 
             dadosPosts.push(novoPost);
+            localStorage.setItem("postsPerfil", JSON.stringify(dadosPosts));
             renderizarLista();
 
             e.target.reset();

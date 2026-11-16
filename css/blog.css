@@ -147,9 +147,12 @@ body {
 }
 
 .card-grid-half {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 16px;
+}
+
+.card-half {
+    flex: 1;
 }
 
 .card-half .card-image-wrapper img {
@@ -225,13 +228,17 @@ body {
 
     .card-grid-half {
         grid-column: span 2;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
         gap: 24px;
     }
 
+    .card-half {
+        flex: 1 1 calc(50% - 12px);
+    }
+
     .card-half .card-image-wrapper img {
-        height: 160px;
+        height: 220px;
     }
 
     .card-info h2 {

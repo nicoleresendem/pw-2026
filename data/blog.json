@@ -1,0 +1,37 @@
+[
+  {
+    "titulo": "Como descartar lixo eletrônico?",
+    "imagem": "imgs/lixo_eletronico.webp",
+    "alt": "Pilha de lixo eletrônico antigo",
+    "tags": "reciclagem noticias",
+    "tipo": "full"
+  },
+  {
+    "titulo": "Um guia para a compostagem",
+    "imagem": "imgs/compostagem.webp",
+    "alt": "Pessoa segurando cascas de frutas para compostagem",
+    "tags": "reciclagem educacao upcycling",
+    "tipo": "full"
+  },
+  {
+    "titulo": "Como separar o lixo",
+    "imagem": "imgs/lixeiras.webp",
+    "alt": "Lixeiras de coleta seletiva coloridas",
+    "tags": "reciclagem educacao",
+    "tipo": "half"
+  },
+  {
+    "titulo": "Conheça as ODS da ONU",
+    "imagem": "imgs/consumo-e-producao-OS12.webp",
+    "alt": "Símbolo do ODS 12 da ONU",
+    "tags": "educacao noticias",
+    "tipo": "half"
+  },
+  {
+    "titulo": "O impacto social do lixo nas comunidades",
+    "imagem": "imgs/pobreza.webp",
+    "alt": "Moradias precárias e impacto social",
+    "tags": "educacao noticias",
+    "tipo": "full"
+  }
+]
