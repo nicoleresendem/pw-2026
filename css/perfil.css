@@ -8,7 +8,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f3ffee;
     color: #001f3f;
-    padding: 30px;
+    padding: 30px 30px 80px 30px;
     margin: 0 auto;
     max-width: 400px;
 }
@@ -332,13 +332,8 @@ body.sem-rolagem {
 }
 
 .btn-remover-post {
-    background-color: #737373;
-    color: white;
     border: none;
-    border-radius: 6px;
-    padding: 4px 8px;
     cursor: pointer;
-    font-size: 12px;
 }
 
 #btn-novo-post {

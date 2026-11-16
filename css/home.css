@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f4fdf0; 
+  background-color: #f4fdf0;
   color: #111a3a;
   display: flex;
   flex-direction: column;
@@ -47,12 +47,57 @@ main {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
 }
 
-.banner-principal img {
+.carrossel-trilho {
+  display: flex;
   width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.carrossel-trilho::-webkit-scrollbar {
+  display: none;
+}
+
+.banner-principal .carrossel-trilho img {
+  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
   height: 200px;
   object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.carrossel-indicadores {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.28);
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.bolinha {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.bolinha.ativa {
+  background-color: #ffffff;
+  width: 20px;
+  border-radius: 10px;
 }
 
 .grid-cards {
@@ -91,18 +136,37 @@ main {
   object-fit: cover;
 }
 
+.card-mapa::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 55%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .info-mapa {
   position: absolute;
   bottom: 16px;
   left: 16px;
   right: 16px;
+  z-index: 2;
 }
 
 .info-mapa p {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 800;
   color: #0e1e47;
   line-height: 1.2;
+}
+
+.container-imagem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 55%);
+  pointer-events: none;
+  z-index: 1;
 }
 
 .texto-sobre-imagem {
@@ -111,10 +175,11 @@ main {
   left: 16px;
   right: 16px;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 800;
   line-height: 1.2;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 .caixa-informativa {
@@ -123,12 +188,12 @@ main {
   padding: 18px 20px;
   border-radius: 20px;
   text-align: center;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
 .menu-inferior {
- position: fixed;
+  position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -153,7 +218,7 @@ main {
 
 @media (max-width: 380px) {
   .grid-cards {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
   }
 
   .card-mapa,
@@ -164,7 +229,7 @@ main {
 
 @media (min-width: 768px) {
   body {
-    max-width: 900px; 
+    max-width: 900px;
   }
 
   .logo-container img {
@@ -176,7 +241,7 @@ main {
     gap: 24px;
   }
 
-  .banner-principal img {
+  .banner-principal .carrossel-trilho img {
     height: 320px;
   }
 
@@ -192,11 +257,11 @@ main {
 
   .info-mapa p,
   .texto-sobre-imagem {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   .caixa-informativa {
-    font-size: 15px;
+    font-size: 20px;
     padding: 24px 32px;
   }
 }

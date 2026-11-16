@@ -18,10 +18,18 @@
     </header>
 
     <main>
-        <section class="banner-principal">
-            <img src="./imgs/lampada.png" alt="Planta crescendo dentro de uma lâmpada">
-        </section>
-
+        <div class="banner-principal">
+            <div class="carrossel-trilho" id="trilho">
+                <img src="./imgs/lampada.png" alt="Imagem de uma lâmpada acesa">
+                <img src="./imgs/paisagem.png" alt="Imagem de uma paisagem">
+                <img src="./imgs/plantinha.png" alt="Imagem de uma plantinha">
+            </div>
+            <div class="carrossel-indicadores" id="indicadores">
+                <span class="bolinha ativa"></span>
+                <span class="bolinha"></span>
+                <span class="bolinha"></span>
+            </div>
+        </div>
         <div class="grid-cards">
 
             <a href="./mapa.html">
@@ -43,7 +51,8 @@
         </div>
 
         <section class="caixa-informativa">
-            <p>Aqui, você encontra informação, troca experiências e participa de ações que ajudam a construir um futuro
+            <p>Aqui, você encontra informação, troca experiências e participa de ações que ajudam a construir um
+                futuro
                 mais sustentável!</p>
         </section>
     </main>
@@ -54,6 +63,7 @@
         <a href="./mapa.html" class="item-menu"><img src="./imgs/pin.png" alt="Notificações"></a>
         <a href="./perfil.html" class="item-menu"><img src="./imgs/perfil_icon.png" alt="Perfil"></a>
     </nav>
+    <script src="js/home.js"></script>
 
 </body>
 

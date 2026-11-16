@@ -75,10 +75,10 @@ function addItemLista(item, index) {
     titulo.innerText = item.titulo;
 
     var btnRemover = document.createElement("button");
-    btnRemover.innerText = "Excluir";
+    btnRemover.innerHTML = '<img src="imgs/lixeira.png" alt="Lixeira">';
     btnRemover.classList.add("btn-remover-post");
     btnRemover.addEventListener("click", function (e) {
-        e.stopPropagation(); // Impede que clicar em "Excluir" abra a modal do post
+        e.stopPropagation(); 
         dadosPosts.splice(index, 1);
         renderizarLista();
     });
@@ -138,7 +138,7 @@ document.getElementById("form-novo-post").addEventListener("submit", function (e
     var titulo = document.getElementById("novo-titulo").value;
     var conteudo = document.getElementById("novo-conteudo").value;
     var inputArquivo = document.getElementById("nova-imagem");
-    var arquivo = inputArquivo.files[0]; // Pega o arquivo de imagem selecionado
+    var arquivo = inputArquivo.files[0]; 
 
     if (arquivo) {
         var leitor = new FileReader();
