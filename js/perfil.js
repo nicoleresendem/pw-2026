@@ -1,18 +1,6 @@
-const botao = document.getElementById('botao-claro-escuro');
-const icone = document.getElementById('icone-tema');
 const botaoEditar = document.querySelector('.botao-perfil');
 const textoNome = document.querySelector('.card-perfil h3');
 const textoBio = document.querySelector('.card-perfil p');
-
-botao.addEventListener('click', function () {
-    document.body.classList.toggle('modo-escuro');
-
-    if (document.body.classList.contains('modo-escuro')) {
-        icone.src = 'imgs/lua.webp'; 
-    } else {
-        icone.src = 'imgs/sol.webp';
-    }
-});
 
 botaoEditar.addEventListener('click', function () {
     if (textoNome.isContentEditable) {

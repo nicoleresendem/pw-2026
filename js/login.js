@@ -1,12 +1,1 @@
-const botao = document.getElementById('botao-claro-escuro');
-const icone = document.getElementById('icone-tema');
-
-botao.addEventListener('click', function () {
-    document.body.classList.toggle('modo-escuro');
-
-    if (document.body.classList.contains('modo-escuro')) {
-        icone.src = 'imgs/lua.webp';
-    } else {
-        icone.src = 'imgs/sol.webp';
-    }
-});
+// O controle do tema claro/escuro foi centralizado em js/tema.js
