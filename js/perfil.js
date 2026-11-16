@@ -67,7 +67,7 @@ function addItemLista(item, index) {
     btnRemover.innerHTML = '<img src="imgs/lixeira.webp" alt="Lixeira">';
     btnRemover.classList.add("btn-remover-post");
     btnRemover.addEventListener("click", function (e) {
-        e.stopPropagation(); // Impede que clicar em "Excluir" abra a modal do post
+        e.stopPropagation(); 
         dadosPosts.splice(index, 1);
         localStorage.setItem("postsPerfil", JSON.stringify(dadosPosts));
         renderizarLista();

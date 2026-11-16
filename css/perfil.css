@@ -334,6 +334,7 @@ body.sem-rolagem {
 .btn-remover-post {
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 
 #btn-novo-post {
@@ -366,6 +367,7 @@ body.modo-escuro {
 }
 
 .modo-escuro .item-menu img,
+.modo-escuro .btn-remover-post img,
 .modo-escuro .header-post img {
     filter: brightness(0) invert(1);
 }
