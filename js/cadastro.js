@@ -5,9 +5,9 @@ botao.addEventListener('click', function () {
     document.body.classList.toggle('modo-escuro');
 
     if (document.body.classList.contains('modo-escuro')) {
-        icone.src = 'imgs/lua.png';
+        icone.src = 'imgs/lua.webp';
     } else {
-        icone.src = 'imgs/sol.png';
+        icone.src = 'imgs/sol.webp';
     }
 });
 
@@ -18,7 +18,7 @@ formCadastro.addEventListener('submit', function (e) {
     const confirmarSenha = document.getElementById('campo-confirmar-senha').value;
 
     if (senha !== confirmarSenha) {
-        e.preventDefault(); 
+        e.preventDefault();
         alert('As senhas não coincidem! Verifique e tente novamente.');
     }
 });

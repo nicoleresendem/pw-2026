@@ -8,9 +8,9 @@ botao.addEventListener('click', function () {
     document.body.classList.toggle('modo-escuro');
 
     if (document.body.classList.contains('modo-escuro')) {
-        icone.src = 'imgs/lua.png'; 
+        icone.src = 'imgs/lua.webp'; 
     } else {
-        icone.src = 'imgs/sol.png';
+        icone.src = 'imgs/sol.webp';
     }
 });
 
@@ -18,7 +18,7 @@ botaoEditar.addEventListener('click', function () {
     if (textoNome.isContentEditable) {
         textoNome.contentEditable = "false";
         textoBio.contentEditable = "false";
-        botaoEditar.innerHTML = '<img src="imgs/lapis-editar-perfil.png" alt="Icone"> Editar perfil';
+        botaoEditar.innerHTML = '<img src="imgs/lapis-editar-perfil.webp" alt="Icone"> Editar perfil';
     } else {
         textoNome.contentEditable = "true";
         textoBio.contentEditable = "true";
@@ -75,10 +75,10 @@ function addItemLista(item, index) {
     titulo.innerText = item.titulo;
 
     var btnRemover = document.createElement("button");
-    btnRemover.innerHTML = '<img src="imgs/lixeira.png" alt="Lixeira">';
+    btnRemover.innerHTML = '<img src="imgs/lixeira.webp" alt="Lixeira">';
     btnRemover.classList.add("btn-remover-post");
     btnRemover.addEventListener("click", function (e) {
-        e.stopPropagation(); 
+        e.stopPropagation(); // Impede que clicar em "Excluir" abra a modal do post
         dadosPosts.splice(index, 1);
         renderizarLista();
     });
@@ -138,13 +138,13 @@ document.getElementById("form-novo-post").addEventListener("submit", function (e
     var titulo = document.getElementById("novo-titulo").value;
     var conteudo = document.getElementById("novo-conteudo").value;
     var inputArquivo = document.getElementById("nova-imagem");
-    var arquivo = inputArquivo.files[0]; 
+    var arquivo = inputArquivo.files[0]; // Pega o arquivo de imagem selecionado
 
     if (arquivo) {
         var leitor = new FileReader();
 
         leitor.onload = function (evento) {
-            var imagemBase64 = evento.target.result; 
+            var imagemBase64 = evento.target.result;
 
             var novoPost = {
                 titulo: titulo,
@@ -160,7 +160,7 @@ document.getElementById("form-novo-post").addEventListener("submit", function (e
             fecharModalCadastro();
         };
 
-        leitor.readAsDataURL(arquivo); 
+        leitor.readAsDataURL(arquivo);
     }
 });
 
