@@ -4,21 +4,24 @@ document.addEventListener("DOMContentLoaded", async () => {
     const containerBlog = document.getElementById("blog-content");
 
     let tagSelecionada = null;
+    let curtidos = JSON.parse(localStorage.getItem("postsCurtidos")) || [];
 
     const criarCardHTML = (post) => {
         const ehHalf = post.tipo === "half";
         const classeTipo = ehHalf ? "card-half" : "card-full";
         const tagsPost = post.tags || "reciclagem educacao upcycling noticias";
         const altTexto = post.alt || post.titulo;
+        const curtido = curtidos.includes(post.titulo);
 
         const article = document.createElement("article");
         article.className = `card ${classeTipo}`;
         article.setAttribute("data-tags", tagsPost);
+        article.dataset.titulo = post.titulo;
 
         article.innerHTML = `
             <div class="card-image-wrapper">
                 <img src="${post.imagem}" alt="${altTexto}">
-                <i class="fa-solid fa-heart heart-icon"></i>
+                <img src="${curtido ? "imgs/coracao.webp" : "imgs/coracaoVazado.webp"}" alt="Curtir" class="heart-icon">
             </div>
             <div class="card-info">
                 <h2>${post.titulo}</h2>
@@ -93,6 +96,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     await carregarPosts();
+    containerBlog.addEventListener("click", (e) => {
+        const coracao = e.target.closest(".heart-icon");
+        if (!coracao) return;
+
+        const titulo = coracao.closest(".card").dataset.titulo;
+        const marcado = !curtidos.includes(titulo);
+
+        coracao.src = marcado ? "imgs/coracao.webp" : "imgs/coracaoVazado.webp";
+
+        curtidos = curtidos.filter(t => t !== titulo);
+        if (marcado) curtidos.push(titulo);
+        localStorage.setItem("postsCurtidos", JSON.stringify(curtidos));
+    });
 
     campoBusca.addEventListener("input", filtrarPosts);
 

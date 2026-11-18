@@ -371,3 +371,25 @@ body.modo-escuro {
 .modo-escuro .header-post img {
     filter: brightness(0) invert(1);
 }
+.botao-sair {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #a32020;
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .botao-sair {
+        justify-content: center;
+        padding: 10px;
+    }
+}
