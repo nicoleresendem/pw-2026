@@ -7,7 +7,7 @@
 
 body {
     background-color: #eef6e9;
-    color: #0d1b42;
+    color: #26640b;
     width: 100%;
     max-width: 480px;
     margin: 0 auto;
@@ -20,7 +20,7 @@ body {
 }
 
 .search-bar {
-    background-color: #0d1b42;
+    background-color: #26640b;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -39,7 +39,7 @@ body {
 }
 
 .search-bar input::placeholder {
-    color: #aeb5c7;
+    color: #d4e8c9;
 }
 
 .search-bar button {
@@ -141,7 +141,7 @@ body {
 
 .ellipsis-icon {
     font-size: 20px;
-    color: #0d1b42;
+    color: #26640b;
     cursor: pointer;
     padding-left: 12px;
 }

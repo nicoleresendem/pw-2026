@@ -7,7 +7,7 @@
 
 body {
   background-color: #f4fdf0;
-  color: #111a3a;
+  color: #26640b;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -156,7 +156,7 @@ main {
 .info-mapa p {
   font-size: 20px;
   font-weight: 800;
-  color: #0e1e47;
+  color: #26640b;
   line-height: 1.2;
 }
 
@@ -183,7 +183,7 @@ main {
 }
 
 .caixa-informativa {
-  background-color: #0e1e47;
+  background-color: #26640b;
   color: #ffffff;
   padding: 18px 20px;
   border-radius: 20px;

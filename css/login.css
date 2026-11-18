@@ -7,7 +7,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f3ffee;
-    color: #001f3f;
+    color: #26640b;
     padding: 30px;
     margin: 0 auto;
     max-width: 400px;
@@ -31,14 +31,14 @@ body {
 .card-login h2 {
     margin: 5px 0 15px 0;
     text-align: center;
-    color: #001f3f;
+    color: #26640b;
     font-size: 18px;
     font-weight: 600;
 }
 
 .card-login p {
     margin: 0;
-    color: #003366;
+    color: #26640b;
     font-size: 16px;
 }
 
@@ -93,7 +93,7 @@ body {
     text-align: center;
     margin-bottom: 10px;
     font-size: 15px;
-    color: #3b5360;
+    color: #26640b;
     text-decoration: none;
 }
 

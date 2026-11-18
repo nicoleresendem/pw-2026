@@ -7,7 +7,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f3ffee;
-    color: #001f3f;
+    color: #26640b;
     padding: 30px 30px 80px 30px;
     margin: 0 auto;
     max-width: 400px;
@@ -38,14 +38,14 @@ body {
 
 .card-perfil h3 {
     margin: 0 0 5px 0;
-    color: #001f3f;
+    color: #26640b;
     font-size: 18px;
     font-weight: 600;
 }
 
 .card-perfil p {
     margin: 0;
-    color: #003366;
+    color: #26640b;
     font-size: 16px;
 }
 
@@ -77,7 +77,7 @@ body {
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #1c2b4d;
+    border: 2px solid #26640b;
     flex-shrink: 0;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 .card-meus-posts h3 {
-    color: #001f3f;
+    color: #26640b;
     font-size: 16px;
     font-weight: 600;
     margin: 0;
@@ -114,13 +114,13 @@ body {
 }
 
 .header-post h3 {
-    color: #001f3f;
+    color: #26640b;
     font-size: 16px;
     margin: 0px;
 }
 
 .card-posts p {
-    color: #001f3f;
+    color: #26640b;
     font-size: 15px;
     margin: 15px;
     text-align: justify;
@@ -283,7 +283,7 @@ body.sem-rolagem {
 
 .modal-caixa {
     background-color: #ffffff;
-    color: #3b5360;
+    color: #26640b;
     width: 90%;
     max-width: 550px;
     max-height: 85vh;

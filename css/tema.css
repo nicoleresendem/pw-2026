@@ -51,7 +51,6 @@ body.modo-escuro,
 .modo-escuro .modal-caixa,
 .modo-escuro .card-login,
 .modo-escuro .card-cadastro,
-.modo-escuro .post,
 .modo-escuro .caixa-informativa,
 .modo-escuro .search-bar,
 .modo-escuro .barra-busca {
@@ -66,8 +65,7 @@ body.modo-escuro,
 .modo-escuro label,
 .modo-escuro .link-login,
 .modo-escuro .esqueceu-senha,
-.modo-escuro .ellipsis-icon,
-.modo-escuro .menu-dots {
+.modo-escuro .ellipsis-icon {
     color: #ffffff;
 }
 

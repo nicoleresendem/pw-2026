@@ -33,7 +33,7 @@ body {
 
 .titulo-cabecalho h1 {
     font-size: 28px;
-    color: #0b1945;
+    color: #26640b;
     line-height: 1.1;
     font-weight: 800;
 }
@@ -72,7 +72,7 @@ body {
 .barra-busca {
     display: flex;
     align-items: center;
-    background-color: #0b1945;
+    background-color: #26640b;
     border-radius: 30px;
     padding: 5px 15px;
     margin-bottom: 25px;
