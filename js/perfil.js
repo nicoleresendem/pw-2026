@@ -1,12 +1,47 @@
 const botaoEditar = document.querySelector('.botao-perfil');
 const textoNome = document.querySelector('.card-perfil h3');
 const textoBio = document.querySelector('.card-perfil p');
+const fotoPerfil = document.getElementById('perfil-foto');
+const inputFotoPerfil = document.getElementById('input-foto-perfil');
+const botaoSair = document.querySelector('.botao-sair');
+
+var usuarioAtual = null;
+var dadosPosts = [];
+
+function salvarUsuarioNoStorage() {
+    if (!usuarioAtual) return;
+    usuarioAtual.posts = dadosPosts;
+    localStorage.setItem("usuarioLogado", JSON.stringify(usuarioAtual));
+
+    var usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
+    var idx = usuarios.findIndex(u => u.email === usuarioAtual.email);
+    if (idx !== -1) {
+        usuarios[idx] = usuarioAtual;
+    } else {
+        usuarios.push(usuarioAtual);
+    }
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+    var todosPostsUsuarios = [];
+    usuarios.forEach(u => {
+        if (Array.isArray(u.posts)) {
+            todosPostsUsuarios = todosPostsUsuarios.concat(u.posts);
+        }
+    });
+    localStorage.setItem("postsPerfil", JSON.stringify(todosPostsUsuarios));
+}
 
 botaoEditar.addEventListener('click', function () {
     if (textoNome.isContentEditable) {
         textoNome.contentEditable = "false";
         textoBio.contentEditable = "false";
         botaoEditar.innerHTML = '<img src="imgs/lapis-editar-perfil.webp" alt="Icone"> Editar perfil';
+
+        if (usuarioAtual) {
+            usuarioAtual.nome = textoNome.innerText.trim();
+            usuarioAtual.bio = textoBio.innerText.trim();
+            salvarUsuarioNoStorage();
+        }
     } else {
         textoNome.contentEditable = "true";
         textoBio.contentEditable = "true";
@@ -15,7 +50,31 @@ botaoEditar.addEventListener('click', function () {
     }
 });
 
-var dadosPosts = [];
+fotoPerfil.addEventListener('click', function () {
+    inputFotoPerfil.click();
+});
+
+inputFotoPerfil.addEventListener('change', function () {
+    var arquivo = inputFotoPerfil.files[0];
+    if (!arquivo) return;
+
+    var leitor = new FileReader();
+    leitor.onload = function (evento) {
+        var fotoBase64 = evento.target.result;
+        fotoPerfil.setAttribute("src", fotoBase64);
+        if (usuarioAtual) {
+            usuarioAtual.foto = fotoBase64;
+            salvarUsuarioNoStorage();
+        }
+    };
+    leitor.readAsDataURL(arquivo);
+});
+
+if (botaoSair) {
+    botaoSair.addEventListener('click', function () {
+        localStorage.removeItem("usuarioLogado");
+    });
+}
 
 async function loadData() {
     try {
@@ -26,12 +85,34 @@ async function loadData() {
 
         var data = await response.json();
 
-        document.getElementById("perfil-nome").innerText = data.usuario.nome;
-        document.getElementById("perfil-bio").innerText = data.usuario.bio;
-        document.getElementById("perfil-foto").setAttribute("src", data.usuario.foto);
+        var usuariosSalvos = localStorage.getItem("usuarios");
+        if (!usuariosSalvos) {
+            var padrao = {
+                nome: data.usuario.nome,
+                email: data.usuario.email || "cristiano@email.com",
+                senha: data.usuario.senha || "123",
+                bio: data.usuario.bio,
+                foto: data.usuario.foto,
+                posts: data.posts || []
+            };
+            localStorage.setItem("usuarios", JSON.stringify([padrao]));
+        }
 
-        var postsSalvos = localStorage.getItem("postsPerfil");
-        dadosPosts = postsSalvos ? JSON.parse(postsSalvos) : data.posts;
+        var logadoSalvo = localStorage.getItem("usuarioLogado");
+        if (logadoSalvo) {
+            usuarioAtual = JSON.parse(logadoSalvo);
+        } else {
+            var listaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
+            usuarioAtual = listaUsuarios[0];
+            localStorage.setItem("usuarioLogado", JSON.stringify(usuarioAtual));
+        }
+
+        document.getElementById("perfil-nome").innerText = usuarioAtual.nome;
+        document.getElementById("perfil-bio").innerText = usuarioAtual.bio;
+        document.getElementById("perfil-foto").setAttribute("src", usuarioAtual.foto);
+
+        dadosPosts = usuarioAtual.posts || [];
+        salvarUsuarioNoStorage();
         renderizarLista();
 
     } catch (err) {
@@ -67,9 +148,9 @@ function addItemLista(item, index) {
     btnRemover.innerHTML = '<img src="imgs/lixeira.webp" alt="Lixeira">';
     btnRemover.classList.add("btn-remover-post");
     btnRemover.addEventListener("click", function (e) {
-        e.stopPropagation(); // Impede que clicar em "Excluir" abra a modal do post
+        e.stopPropagation();
         dadosPosts.splice(index, 1);
-        localStorage.setItem("postsPerfil", JSON.stringify(dadosPosts));
+        salvarUsuarioNoStorage();
         renderizarLista();
     });
 
@@ -128,7 +209,7 @@ document.getElementById("form-novo-post").addEventListener("submit", function (e
     var titulo = document.getElementById("novo-titulo").value;
     var conteudo = document.getElementById("novo-conteudo").value;
     var inputArquivo = document.getElementById("nova-imagem");
-    var arquivo = inputArquivo.files[0]; // Pega o arquivo de imagem selecionado
+    var arquivo = inputArquivo.files[0];
 
     if (arquivo) {
         var leitor = new FileReader();
@@ -145,7 +226,7 @@ document.getElementById("form-novo-post").addEventListener("submit", function (e
             };
 
             dadosPosts.push(novoPost);
-            localStorage.setItem("postsPerfil", JSON.stringify(dadosPosts));
+            salvarUsuarioNoStorage();
             renderizarLista();
 
             e.target.reset();

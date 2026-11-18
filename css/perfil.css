@@ -79,6 +79,7 @@ body {
     object-fit: cover;
     border: 2px solid #26640b;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 .card-meus-posts {

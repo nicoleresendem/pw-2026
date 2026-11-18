@@ -1,6 +1,8 @@
 {
   "usuario": {
     "nome": "Cristiano",
+    "email": "cristiano@email.com",
+    "senha": "cristiano123",
     "bio": "Apaixonado por sustentabilidade e consumo consciente.",
     "foto": "imgs/foto-cristiano.webp"
   },
