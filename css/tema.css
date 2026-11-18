@@ -73,3 +73,9 @@ body.modo-escuro,
 .modo-escuro .header-post img {
     filter: brightness(0) invert(1);
 }
+
+.modo-escuro .card-image-wrapper img[src^="data:"],
+.modo-escuro .card-posts>img[src^="data:"],
+.modo-escuro .modal-caixa img {
+    background-color: #222222;
+}

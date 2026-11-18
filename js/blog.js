@@ -29,8 +29,32 @@ document.addEventListener("DOMContentLoaded", async () => {
             </div>
         `;
 
+        article.addEventListener("click", (e) => {
+            if (e.target.closest(".heart-icon")) return;
+            abrirModal(post);
+        });
+
         return article;
     };
+
+    const abrirModal = (post) => {
+        document.getElementById("modal-titulo").innerText = post.titulo;
+        document.getElementById("modal-imagem").setAttribute("src", post.imagem);
+        document.getElementById("modal-texto").innerText = post.conteudo || post.resumo || "";
+
+        document.getElementById("modal-overlay").classList.remove("overlay-escondido");
+        document.body.classList.add("sem-rolagem");
+    };
+
+    const fecharModal = () => {
+        document.getElementById("modal-overlay").classList.add("overlay-escondido");
+        document.body.classList.remove("sem-rolagem");
+    };
+
+    document.getElementById("fechar-modal").addEventListener("click", fecharModal);
+    document.getElementById("modal-overlay").addEventListener("click", (e) => {
+        if (e.target.id === "modal-overlay") fecharModal();
+    });
 
     const carregarPosts = async () => {
         try {

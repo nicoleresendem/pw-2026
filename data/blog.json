@@ -4,34 +4,39 @@
     "imagem": "imgs/lixo_eletronico.webp",
     "alt": "Pilha de lixo eletrônico antigo",
     "tags": "reciclagem noticias",
-    "tipo": "full"
+    "tipo": "full",
+    "conteudo": "Celulares antigos, cabos, pilhas, baterias e computadores nunca devem ser descartados no lixo comum. Esses materiais contêm metais pesados que podem contaminar o solo e a água.\n\nPara descartar corretamente, procure ecopontos, cooperativas de reciclagem de eletrônicos (como os pontos disponíveis no nosso mapa) ou pontos de coleta em lojas e supermercados. Antes de entregar celulares ou computadores, lembre-se de apagar seus dados pessoais."
   },
   {
     "titulo": "Um guia para a compostagem",
     "imagem": "imgs/compostagem.webp",
     "alt": "Pessoa segurando cascas de frutas para compostagem",
     "tags": "reciclagem educacao upcycling",
-    "tipo": "full"
+    "tipo": "full",
+    "conteudo": "Cerca de metade do lixo produzido em casa é orgânico. Com a compostagem doméstica, você transforma cascas de frutas, legumes, borra de café e folhas secas em um adubo rico em nutrientes para plantas e hortas.\n\nBasta intercalar camadas de resíduos úmidos (restos vegetais) com resíduos secos (folhas secas ou serragem) em uma composteira arejada, evitando carnes, laticínios e alimentos muito gordurosos."
   },
   {
     "titulo": "Como separar o lixo",
     "imagem": "imgs/lixeiras.webp",
     "alt": "Lixeiras de coleta seletiva coloridas",
     "tags": "reciclagem educacao",
-    "tipo": "half"
+    "tipo": "half",
+    "conteudo": "Separar o lixo em casa é o primeiro passo para que a reciclagem aconteça de verdade. Divida pelo menos entre resíduos recicláveis secos (papel, plástico, metal e vidro) e resíduos orgânicos/rejeitos.\n\nPasse uma água rápida nas embalagens para remover restos de comida e seque-as antes de colocar no saco de recicláveis. Vidros quebrados devem ser embalados em jornal ou caixas para proteger os coletores."
   },
   {
     "titulo": "Conheça as ODS da ONU",
     "imagem": "imgs/consumo-e-producao-OS12.webp",
     "alt": "Símbolo do ODS 12 da ONU",
     "tags": "educacao noticias",
-    "tipo": "half"
+    "tipo": "half",
+    "conteudo": "Os Objetivos de Desenvolvimento Sustentável (ODS) da ONU são 17 metas globais para construir um futuro mais justo e sustentável até 2030.\n\nO ODS 12 trata especificamente de Consumo e Produção Responsáveis: reduzir o desperdício de alimentos, diminuir a geração de resíduos por meio da prevenção, reciclagem e reutilização, e incentivar práticas sustentáveis no dia a dia."
   },
   {
     "titulo": "O impacto social do lixo nas comunidades",
     "imagem": "imgs/pobreza.webp",
     "alt": "Moradias precárias e impacto social",
     "tags": "educacao noticias",
-    "tipo": "full"
+    "tipo": "full",
+    "conteudo": "O descarte incorreto de resíduos afeta diretamente a saúde pública e a qualidade de vida das comunidades mais vulneráveis, causando enchentes, obstrução de bueiros e proliferação de doenças.\n\nPor outro lado, apoiar associações e cooperativas de catadores fortalece a economia local, gera renda digna para centenas de famílias e mantém os bairros mais limpos e seguros para todos."
   }
 ]
