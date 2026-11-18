@@ -5,64 +5,30 @@ L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
     attribution: '© Google'
 }).addTo(mapa);
 
-const pontosDeColeta = [
-    {
-        nome: "BIOVALE RECICLAGEM DE ELETRÔNICOS",
-        lat: -19.4506079,
-        lng: -42.5868735,
-        cidade: "Ipatinga",
-        bairro: "Limoeiro",
-        endereco: "Av. Sanitária, 2311",
-        materiais: "Computadores, placas, cabos, celulares e eletrônicos",
-        horario: "Seg-Sex: 08:00 - 17:00",
-        telefone: "+55 31 99993-8150"
-    },
-    {
-        nome: "BIOVALE RECICLAGEM DE ELETRÔNICOS (Unidade Fabriciano)",
-        lat: -19.5193081,
-        lng: -42.6289224,
-        cidade: "Coronel Fabriciano",
-        bairro: "Centro",
-        endereco: "Ponto de coleta integrado",
-        materiais: "Computadores, placas, cabos, celulares e eletrônicos",
-        horario: "Seg-Sex: 08:00 - 17:00",
-        telefone: "+55 31 99993-8150"
-    },
-    {
-        nome: "ASCATI - Associação de Catadores",
-        lat: -19.5353314,
-        lng: -42.6251517,
-        cidade: "Timóteo",
-        bairro: "Eldorado",
-        endereco: "R. Cento e Sessenta e Um, 501",
-        materiais: "Materiais recicláveis em geral",
-        horario: "Horário comercial",
-        telefone: "Não informado"
-    },
-    {
-        nome: "Reciclagem Vieira",
-        lat: -19.7455947,
-        lng: -42.1319045,
-        cidade: "Caratinga",
-        bairro: "Graça",
-        endereco: "Av. Monsenhor Aristides Rocha, 695",
-        materiais: "Sucatas de alumínio, metais e plásticos",
-        horario: "Horário comercial",
-        telefone: "Não informado"
+var pontosDeColeta = [];
+
+async function carregarPontos() {
+    try {
+        var response = await fetch('./data/mapa.json');
+        pontosDeColeta = await response.json();
+
+        pontosDeColeta.forEach(function (ponto) {
+            var conteudoPopup = `
+                <strong style="color: #2b7a2b; font-size: 14px;">${ponto.nome}</strong><br><br>
+                <b>📍 Local:</b> ${ponto.endereco} - ${ponto.bairro}, ${ponto.cidade}<br>
+                <b>♻️ Aceita:</b> ${ponto.materiais}<br>
+                <b>🕒 Horário:</b> ${ponto.horario}<br>
+                <b>📞 Contato:</b> ${ponto.telefone}
+            `;
+
+            ponto.marcador = L.marker([ponto.lat, ponto.lng]).addTo(mapa).bindPopup(conteudoPopup);
+        });
+    } catch (err) {
+        console.error(err);
     }
-];
+}
 
-pontosDeColeta.forEach(function (ponto) {
-    var conteudoPopup = `
-        <strong style="color: #2b7a2b; font-size: 14px;">${ponto.nome}</strong><br><br>
-        <b>📍 Local:</b> ${ponto.endereco} - ${ponto.bairro}, ${ponto.cidade}<br>
-        <b>♻️ Aceita:</b> ${ponto.materiais}<br>
-        <b>🕒 Horário:</b> ${ponto.horario}<br>
-        <b>📞 Contato:</b> ${ponto.telefone}
-    `;
-
-    ponto.marcador = L.marker([ponto.lat, ponto.lng]).addTo(mapa).bindPopup(conteudoPopup);
-});
+carregarPontos();
 
 var formBusca = document.querySelector('.barra-busca');
 
