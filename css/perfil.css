@@ -543,51 +543,51 @@ body.modo-escuro .modal-caixa {
     .card-posts {
         margin-top: 0;
     }
+}
 
-    .card-meus-posts {
-        flex-wrap: wrap;
-    }
+.card-meus-posts {
+    flex-wrap: wrap;
+}
 
-    .abas-posts {
-        display: flex;
-        gap: 8px;
-    }
+.abas-posts {
+    display: flex;
+    gap: 8px;
+}
 
-    .aba-btn {
-        background-color: transparent;
-        color: var(--cor-texto);
-        border: 1.5px solid var(--cor-primaria);
-        border-radius: 20px;
-        padding: 6px 14px;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 14px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.2s ease, color 0.2s ease;
-    }
+.aba-btn {
+    background-color: transparent;
+    color: var(--cor-texto);
+    border: 1.5px solid var(--cor-primaria);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
 
-    .aba-btn.ativa {
-        background-color: var(--cor-primaria);
-        color: #ffffff;
-    }
+.aba-btn.ativa {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+}
 
-    .btn-descurtir-post {
-        border: none;
-        cursor: pointer;
-        background-color: transparent;
-        padding: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: transform 0.15s ease;
-    }
+.btn-descurtir-post {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease;
+}
 
-    .btn-descurtir-post:hover {
-        transform: scale(1.15);
-    }
+.btn-descurtir-post:hover {
+    transform: scale(1.15);
+}
 
-    /* Mantém o coração vermelho mesmo no modo escuro */
-    .modo-escuro .btn-descurtir-post img {
-        filter: none;
-    }
+/* Mantém o coração vermelho mesmo no modo escuro */
+.modo-escuro .btn-descurtir-post img {
+    filter: none;
 }
