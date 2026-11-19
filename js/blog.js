@@ -53,7 +53,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("fechar-modal").addEventListener("click", fecharModal);
     document.getElementById("modal-overlay").addEventListener("click", (e) => {
-        if (e.target.id === "modal-overlay") fecharModal();
+        if (e.target === e.currentTarget) fecharModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") fecharModal();
     });
 
     const carregarPosts = async () => {
@@ -68,7 +72,12 @@ document.addEventListener("DOMContentLoaded", async () => {
             const postsSalvos = localStorage.getItem("postsPerfil");
             const postsPerfil = postsSalvos ? JSON.parse(postsSalvos) : (dataPerfil.posts || []);
 
-            const todosOsPosts = [...postsBlog, ...postsPerfil];
+            const postsPerfilHalf = postsPerfil.map(post => ({
+                ...post,
+                tipo: "half"
+            }));
+
+            const todosOsPosts = [...postsBlog, ...postsPerfilHalf];
             containerBlog.innerHTML = "";
 
             let gridHalfAtual = null;
@@ -120,6 +129,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     await carregarPosts();
+
     containerBlog.addEventListener("click", (e) => {
         const coracao = e.target.closest(".heart-icon");
         if (!coracao) return;

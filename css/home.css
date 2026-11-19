@@ -11,7 +11,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
   width: 100%;
   max-width: 480px;
   margin: 0 auto;
@@ -27,7 +27,7 @@ img {
 header {
   display: flex;
   justify-content: center;
-  padding: 20px 16px;
+  padding: 20px 16px 12px 16px;
 }
 
 .logo-container img {
@@ -43,11 +43,30 @@ main {
   width: 100%;
 }
 
+.topo-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.topo-home #botao-claro-escuro {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.saudacao-usuario {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--cor-texto);
+}
+
 .banner-principal {
   width: 100%;
   border-radius: 20px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .carrossel-trilho {
@@ -122,6 +141,7 @@ main {
   overflow: hidden;
   position: relative;
   height: 210px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .card-mapa {
@@ -190,30 +210,56 @@ main {
   text-align: center;
   font-size: 16px;
   line-height: 1.5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
-.menu-inferior {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  background-color: #f6fdf2;
+.card-dica-ods {
+  background-color: var(--cor-card);
+  color: var(--cor-texto);
+  padding: 16px 20px;
+  border-radius: 20px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.dica-topo {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
-  z-index: 999;
+  gap: 10px;
 }
 
-.item-menu {
-  display: block;
+.badge-ods {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
-.item-menu img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+#btn-nova-dica {
+  background: transparent;
+  border: 1.5px solid var(--cor-primaria);
+  color: var(--cor-texto);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#btn-nova-dica:hover {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+#texto-dica-ods {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 @media (max-width: 380px) {
@@ -241,6 +287,10 @@ main {
     gap: 24px;
   }
 
+  .saudacao-usuario {
+    font-size: 20px;
+  }
+
   .banner-principal .carrossel-trilho img {
     height: 320px;
   }
@@ -261,7 +311,11 @@ main {
   }
 
   .caixa-informativa {
-    font-size: 20px;
+    font-size: 19px;
     padding: 24px 32px;
+  }
+
+  #texto-dica-ods {
+    font-size: 16px;
   }
 }

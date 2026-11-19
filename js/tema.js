@@ -1,23 +1,26 @@
 const botaoTema = document.getElementById('botao-claro-escuro');
 const iconeTema = document.getElementById('icone-tema');
 
-if (localStorage.getItem('modo-escuro') === 'ativo') {
-    document.body.classList.add('modo-escuro');
+function aplicarTema(modoEscuro) {
+    document.body.classList.toggle('modo-escuro', modoEscuro);
+
     if (iconeTema) {
-        iconeTema.src = 'imgs/lua.webp';
+        iconeTema.src = modoEscuro ? 'imgs/lua.webp' : 'imgs/sol.webp';
+        iconeTema.alt = modoEscuro ? 'Ativar tema claro' : 'Ativar tema escuro';
+    }
+
+    if (botaoTema) {
+        botaoTema.setAttribute('aria-label', modoEscuro ? 'Ativar tema claro' : 'Ativar tema escuro');
+        botaoTema.setAttribute('aria-pressed', String(modoEscuro));
     }
 }
 
+aplicarTema(localStorage.getItem('modo-escuro') === 'ativo');
+
 if (botaoTema) {
     botaoTema.addEventListener('click', function () {
-        document.body.classList.toggle('modo-escuro');
-
-        if (document.body.classList.contains('modo-escuro')) {
-            iconeTema.src = 'imgs/lua.webp';
-            localStorage.setItem('modo-escuro', 'ativo');
-        } else {
-            iconeTema.src = 'imgs/sol.webp';
-            localStorage.setItem('modo-escuro', 'inativo');
-        }
+        const ativarEscuro = !document.body.classList.contains('modo-escuro');
+        aplicarTema(ativarEscuro);
+        localStorage.setItem('modo-escuro', ativarEscuro ? 'ativo' : 'inativo');
     });
 }

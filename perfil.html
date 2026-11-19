@@ -33,11 +33,13 @@
         <input type="file" id="input-foto-perfil" accept="image/*" style="display: none;">
     </div>
 
-    <div class="card-meus-posts">
-        <h3>Meus posts</h3>
-        <button id="btn-novo-post" class="botao-perfil">+ Novo post</button>
+<div class="card-meus-posts">
+    <div class="abas-posts">
+        <button id="aba-meus-posts" class="aba-btn ativa">Meus posts</button>
+        <button id="aba-curtidos" class="aba-btn">Curtidos</button>
     </div>
-
+    <button id="btn-novo-post" class="botao-perfil">+ Novo post</button>
+</div>
     <p id="msg-lista-vazia" style="display: none; text-align: center; margin: 20px 0;">Lista vazia</p>
 
     <ul id="cards" class="grid-posts"></ul>

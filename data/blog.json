@@ -5,15 +5,7 @@
     "alt": "Pilha de lixo eletrônico antigo",
     "tags": "reciclagem noticias",
     "tipo": "full",
-    "conteudo": "Celulares antigos, cabos, pilhas, baterias e computadores nunca devem ser descartados no lixo comum. Esses materiais contêm metais pesados que podem contaminar o solo e a água.\n\nPara descartar corretamente, procure ecopontos, cooperativas de reciclagem de eletrônicos (como os pontos disponíveis no nosso mapa) ou pontos de coleta em lojas e supermercados. Antes de entregar celulares ou computadores, lembre-se de apagar seus dados pessoais."
-  },
-  {
-    "titulo": "Um guia para a compostagem",
-    "imagem": "imgs/compostagem.webp",
-    "alt": "Pessoa segurando cascas de frutas para compostagem",
-    "tags": "reciclagem educacao upcycling",
-    "tipo": "full",
-    "conteudo": "Cerca de metade do lixo produzido em casa é orgânico. Com a compostagem doméstica, você transforma cascas de frutas, legumes, borra de café e folhas secas em um adubo rico em nutrientes para plantas e hortas.\n\nBasta intercalar camadas de resíduos úmidos (restos vegetais) com resíduos secos (folhas secas ou serragem) em uma composteira arejada, evitando carnes, laticínios e alimentos muito gordurosos."
+    "conteudo": "Celulares antigos, cabos, pilhas, baterias e computadores nunca devem ser descartados no lixo comum. Esses equipamentos contêm metais pesados — como chumbo, mercúrio e cádmio — que contaminam o solo e os lençóis freáticos quando vão parar em aterros.\n\nO que fazer antes de descartar:\n• Apague seus dados pessoais e restaure celulares e notebooks para o padrão de fábrica.\n• Remova pilhas e baterias soltas e armazene-as em um recipiente seco até o descarte.\n• Se o aparelho ainda funciona, considere doar ou vender para prolongar sua vida útil.\n\nOnde entregar?\nProcure ecopontos municipais, cooperativas de reciclagem especializadas (você pode consultar pontos próximos no nosso mapa) ou coletores disponíveis em supermercados, farmácias e lojas de eletrônicos."
   },
   {
     "titulo": "Como separar o lixo",
@@ -21,15 +13,39 @@
     "alt": "Lixeiras de coleta seletiva coloridas",
     "tags": "reciclagem educacao",
     "tipo": "half",
-    "conteudo": "Separar o lixo em casa é o primeiro passo para que a reciclagem aconteça de verdade. Divida pelo menos entre resíduos recicláveis secos (papel, plástico, metal e vidro) e resíduos orgânicos/rejeitos.\n\nPasse uma água rápida nas embalagens para remover restos de comida e seque-as antes de colocar no saco de recicláveis. Vidros quebrados devem ser embalados em jornal ou caixas para proteger os coletores."
+    "conteudo": "Separar o lixo em casa é o primeiro passo para que a reciclagem aconteça de verdade. Se não houver espaço para várias lixeiras, comece dividindo em apenas dois grupos: recicláveis secos e orgânicos/rejeitos.\n\nBoas práticas que fazem diferença:\n• Passe uma água rápida ou guardanapo usado nas embalagens para remover restos de comida e evitar mau cheiro.\n• Seque os itens antes de colocar no saco de recicláveis — papel molhado ou engordurado perde o valor de reciclagem.\n• Embale vidros quebrados em jornal, caixa de leite ou garrafa PET cortada para proteger os coletores.\n• Amasse latinhas e caixas de papelão para economizar espaço."
   },
   {
-    "titulo": "Conheça as ODS da ONU",
-    "imagem": "imgs/consumo-e-producao-OS12.webp",
-    "alt": "Símbolo do ODS 12 da ONU",
+    "titulo": "ODS 12: Consumo e Produção Responsáveis",
+    "imagem": "imgs/objetivos_port.webp",
+    "alt": "Símbolo das ODS da ONU",
     "tags": "educacao noticias",
     "tipo": "half",
-    "conteudo": "Os Objetivos de Desenvolvimento Sustentável (ODS) da ONU são 17 metas globais para construir um futuro mais justo e sustentável até 2030.\n\nO ODS 12 trata especificamente de Consumo e Produção Responsáveis: reduzir o desperdício de alimentos, diminuir a geração de resíduos por meio da prevenção, reciclagem e reutilização, e incentivar práticas sustentáveis no dia a dia."
+    "conteudo": "A ODS 12 da ONU tem um objetivo claro: garantir padrões de produção e consumo mais sustentáveis. Em um planeta com recursos finitos, o jeito como produzimos, compramos e descartamos precisa mudar.\n\nHoje, milhões de toneladas de alimentos são desperdiçados todos os anos, enquanto o excesso de embalagens e o descarte incorreto sobrecarregam o meio ambiente. A ODS 12 propõe fazer mais e melhor com menos.\n\nComo aplicar no dia a dia?\n• Compre apenas o necessário e evite o desperdício de alimentos.\n• Prefira produtos duráveis, locais e com menos embalagens.\n• Reutilize, conserte e recicle sempre que possível.\n• Apoie marcas comprometidas com práticas sustentáveis.\n\nNosso site nasceu justamente desse propósito: informar, inspirar e conectar pessoas dispostas a transformar pequenos hábitos em um grande impacto positivo para o futuro."
+  },
+  {
+    "titulo": "Um guia para a compostagem",
+    "imagem": "imgs/compostagem.webp",
+    "alt": "Pessoa segurando cascas de frutas para compostagem",
+    "tags": "reciclagem educacao upcycling",
+    "tipo": "full",
+    "conteudo": "Cerca de metade do lixo produzido em uma casa brasileira é composto por resíduos orgânicos. Com a compostagem doméstica, você evita que esse material gere gás metano nos aterros e ainda produz um adubo rico em nutrientes para plantas e hortas.\n\nO que pode ir na composteira:\n• Cascas e talos de frutas, legumes e verduras.\n• Borra de café (com filtro de papel) e saquinhos de chá sem grampos.\n• Cascas de ovos trituradas, folhas secas e serragem sem verniz.\n\nO que evitar:\n• Carnes, ossos, laticínios, comidas muito gordurosas e fezes de animais domésticos.\n\nDica de ouro: mantenha sempre o equilíbrio cobrindo os resíduos úmidos com uma camada generosa de matéria seca (folhas secas ou serragem). Isso evita mau cheiro e atrai apenas os microrganismos certos."
+  },
+  {
+    "titulo": "Upcycling: dê nova vida ao que ia pro lixo",
+    "imagem": "imgs/upcycling.webp",
+    "alt": "Objetos reutilizados de forma criativa com upcycling",
+    "tags": "upcycling reciclagem",
+    "tipo": "half",
+    "conteudo": "Diferente da reciclagem comum — que tritura ou derrete um material para criar outro —, o upcycling transforma objetos descartados em peças novas com igual ou maior valor, usando criatividade e quase nenhuma energia industrial.\n\nIdeias simples para começar hoje:\n• Potes de vidro de conservas viram organizadores de temperos, copos ou luminárias.\n• Calças jeans rasgadas podem ser transformadas em ecobags, aventais ou capas de almofada.\n• Caixotes de feira lixados e envernizados se tornam nichos, sapateiras ou mesas de cabeceira.\n• Latas de metal decoradas funcionam como porta-lápis e vasos para suculentas.\n\nAntes de jogar algo fora, vale sempre a pergunta: esse objeto ainda pode ter outra função?"
+  },
+  {
+    "titulo": "Fast fashion e o impacto da moda no planeta",
+    "imagem": "imgs/moda_sustentavel.webp",
+    "alt": "Arara com roupas de brechó e moda sustentável",
+    "tags": "upcycling educacao noticias",
+    "tipo": "half",
+    "conteudo": "A indústria da moda está entre as que mais consomem água e geram resíduos no mundo. O modelo de fast fashion incentiva coleções semanais, peças baratas de baixa durabilidade e descarte rápido — toneladas de roupas quase novas acabam em aterros todos os anos.\n\nComo consumir moda de forma mais consciente:\n• Pergunte a si mesmo se você vai usar a peça pelo menos 30 vezes antes de comprar.\n• Explore brechós físicos e online: além de economizar, você encontra peças únicas e reduz a demanda por nova produção.\n• Valorize consertos, ajustes e customizações para renovar roupas que já estão no seu guarda-roupa.\n• Prefira tecidos naturais e marcas transparentes sobre sua cadeia produtiva."
   },
   {
     "titulo": "O impacto social do lixo nas comunidades",
@@ -37,6 +53,30 @@
     "alt": "Moradias precárias e impacto social",
     "tags": "educacao noticias",
     "tipo": "full",
-    "conteudo": "O descarte incorreto de resíduos afeta diretamente a saúde pública e a qualidade de vida das comunidades mais vulneráveis, causando enchentes, obstrução de bueiros e proliferação de doenças.\n\nPor outro lado, apoiar associações e cooperativas de catadores fortalece a economia local, gera renda digna para centenas de famílias e mantém os bairros mais limpos e seguros para todos."
+    "conteudo": "O descarte incorreto de resíduos não é apenas um problema ambiental — é também uma questão de justiça social e saúde pública. Em áreas com coleta precária, o acúmulo de lixo entope bueiros, agrava enchentes e favorece a proliferação de doenças como dengue e leptospirose.\n\nPor outro lado, a reciclagem tem um papel social fundamental no Brasil: grande parte de todo o material reciclado no país passa pelas mãos de catadores e cooperativas.\n\nComo ajudar na prática:\n• Separe e limpe seus recicláveis corretamente para garantir trabalho digno e seguro a quem faz a triagem.\n• Apoie cooperativas locais entregando seus materiais diretamente nos pontos de coleta.\n• Cobrar coleta seletiva e saneamento básico no seu município também é um ato de cidadania."
+  },
+  {
+    "titulo": "Como evitar o desperdício de alimentos",
+    "imagem": "imgs/alimentos.webp",
+    "alt": "Frutas e legumes frescos organizados na cozinha",
+    "tags": "educacao reciclagem",
+    "tipo": "half",
+    "conteudo": "Cerca de um terço de todos os alimentos produzidos no mundo acaba no lixo — e boa parte desse desperdício acontece dentro de casa. Jogar comida fora significa desperdiçar também toda a água, energia e trabalho usados para produzi-la.\n\nHábitos simples que economizam dinheiro e reduzem o lixo:\n• Faça uma lista antes de ir ao mercado e confira o que já tem na geladeira.\n• Organize a despensa deixando os itens mais antigos na frente para consumir primeiro.\n• Aproveite talos, folhas e cascas em caldos, farofas, bolos e refogados.\n• Congele porções extras e frutas muito maduras para usar em sucos e vitaminas."
+  },
+  {
+    "titulo": "O que é economia circular?",
+    "imagem": "imgs/economia_circular.webp",
+    "alt": "Ilustração representando ciclo de economia circular",
+    "tags": "educacao noticias upcycling",
+    "tipo": "half",
+    "conteudo": "Desde a Revolução Industrial, seguimos um modelo linear: extrair recursos, produzir, usar e descartar. A economia circular propõe repensar esse ciclo desde o projeto dos produtos para que o conceito de lixo deixe de existir.\n\nSeus três pilares principais são:\n• Eliminar resíduos e poluição já na fase de design das embalagens e produtos.\n• Manter materiais em uso pelo maior tempo possível por meio de reparo, compartilhamento, reuso e reciclagem.\n• Regenerar sistemas naturais, devolvendo nutrientes ao solo e usando energias renováveis.\n\nAo consertar um aparelho, comprar refis ou escolher embalagens retornáveis, você já está colocando a economia circular em movimento."
+  },
+  {
+    "titulo": "Plásticos descartáveis: trocas simples no dia a dia",
+    "imagem": "imgs/plastico_zero.webp",
+    "alt": "Itens reutilizáveis como garrafa, copo e ecobag",
+    "tags": "reciclagem educacao",
+    "tipo": "full",
+    "conteudo": "Muitos plásticos descartáveis são usados por poucos minutos, mas levam centenas de anos para se decompor na natureza, fragmentando-se em microplásticos que contaminam oceanos, rios e até a nossa alimentação.\n\nVocê não precisa mudar tudo de uma vez. Comece substituindo os itens que mais usa fora de casa:\n• Sacolas de supermercado -> leve ecobags ou caixas reutilizáveis no carro ou na mochila.\n• Garrafas de água descartáveis -> tenha sempre uma garrafa reutilizável por perto.\n• Copos plásticos no trabalho -> adote uma caneca ou copo retrátil pessoal.\n• Canudos e talheres descartáveis -> recuse no delivery quando já estiver em casa.\n\nPequenas escolhas repetidas todos os dias evitam centenas de embalagens descartadas ao longo de um único ano."
   }
 ]
